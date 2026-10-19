@@ -1,263 +1,464 @@
-// 八个地标共用这一份数据。只修改对应编号对象，页面会自动同步。
-// TODO_MEMBER_CONTENT：基础信息、标题、简介、故事、感悟、关键词。
-// TODO_IMAGE：images 填相对路径，如 images/01/cover.jpg；image_captions 填图片说明。
-// TODO_SOURCE：sources 至少两项 {name:"资料名称",publisher:"发布机构",url:"https://..."}。
-// TODO_MAP_POSITION：map_position 为800×660示意画布中的x/y，不是经纬度。
+// 红脉数寻：地标、影像与资料来源。
 const sites = [
   {
     "id": "01",
     "collector": "张滢琳",
     "site_name": "中国共产党第一次全国代表大会纪念馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "黄浦区",
+    "address": "上海市黄浦区兴业路76号（中共一大会址）；黄陂南路374号（纪念馆）",
+    "collection_type": "实地采集＋资料整理",
+    "collection_date": "2026年10月1日",
+    "theme": "中国共产党诞生、建党历程、城市记忆",
+    "tagline": "从石库门出发，读懂一个政党的诞生。",
+    "summary": "中共一大会址位于上海兴业路76号。1921年7月23日，中国共产党第一次全国代表大会在这里开幕。今天，中共一大纪念馆通过历史文献、实物与艺术展陈呈现建党历程。会址与展厅共同构成了解中国共产党诞生历史的重要窗口。",
+    "story": "1921年7月23日，来自各地的代表在上海望志路106号、今兴业路76号召开中国共产党第一次全国代表大会。他们代表全国50多名党员，共产国际代表也出席了大会。会议最后一天转移到浙江嘉兴南湖的游船上举行。大会通过党的第一个纲领和决议，选举产生中央局，宣告中国共产党正式成立。展厅中的报刊、历史实物和代表群像，让这段历程有了可见的线索：从近代中国面临的危机，到新思想的传播，再到建党实践，历史在一件件展品之间展开。",
+    "student_note": "这组寻访照片记录了代表群像、报刊陈列、界碑、铁路股票和绘画作品。《新青年》等刊物呈现思想传播的线索，界碑与股票则提供了理解近代社会背景的实物切口。把展品细节与建党史料放在一起阅读，可以更具体地理解中国共产党诞生的时代背景。",
+    "keywords": [
+      "中共一大",
+      "1921年",
+      "石库门",
+      "建党历程"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/01/cover.jpg",
+      "photo02": "images/01/photo02.jpg",
+      "photo03": "images/01/photo03.jpg",
+      "photo04": "images/01/photo04.jpg",
+      "photo05": "images/01/photo05.jpg",
+      "photo06": "images/01/photo06.jpg",
+      "photo07": "images/01/photo07.jpg",
+      "photo08": "images/01/photo08.jpg",
+      "photo09": "images/01/photo09.jpg",
+      "photo10": "images/01/photo10.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "一大代表群像展陈，以石库门造型为背景。",
+      "photo02": "1899年上海公共租界扩界界碑。展签说明了列强扩大租界范围的历史背景。",
+      "photo03": "1908年商办江苏省铁路有限公司股票及股息单，年份与名称据照片中的展签。",
+      "photo04": "《新青年》《新潮》等报刊陈列，展现近代思想传播的媒介。",
+      "photo05": "展厅双人雕塑与建筑场景。",
+      "photo06": "绘画作品《星火》，标题见作品上方。",
+      "photo07": "关于中国共产党诞生历史意义的展板。",
+      "photo08": "表现历史人物围坐讨论场景的绘画作品。",
+      "photo09": "展厅顶部的党徽装饰与空间设计。",
+      "photo10": "党旗与入党誓词展陈。"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "中共一大纪念馆",
+        "publisher": "上海市人民政府",
+        "url": "https://www.shanghai.gov.cn/hsly/20260625/10d0e931417d4614b0d8bbbbd03495c1.html"
+      },
+      {
+        "name": "中国共产党一百年大事记（1921年7月—2021年6月）",
+        "publisher": "中共中央党史和文献研究院；中国网信网转载",
+        "url": "https://www.cac.gov.cn/2021-06/28/c_1626466231109545.htm"
+      }
+    ],
     "map_position": {
       "x": 422,
       "y": 389
-    }
+    },
+    "note_title": "寻迹发现"
   },
   {
     "id": "02",
     "collector": "潘泺棂",
     "site_name": "中国社会主义青年团中央机关旧址纪念馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "黄浦区",
+    "address": "上海市黄浦区淮海中路567弄1-6号（原霞飞路新渔阳里6号）",
+    "collection_type": "数字寻访",
+    "collection_date": "2026年10月6日",
+    "theme": "青年团发源地、外国语学社、俞秀松、石库门",
+    "tagline": "一座石库门小楼，如何点燃中国青年百年信仰的火种？",
+    "summary": "这是一处位于新渔阳里的石库门红色旧址。1920年8月22日，在上海共产党早期组织领导下，俞秀松等8人在这里发起成立上海社会主义青年团。同年9月，外国语学社在此开办，刘少奇、任弼时等曾来此学习。今天的纪念馆记录着青年追求真理、投身革命的起点。",
+    "story": "1920年8月，俞秀松等人在新渔阳里6号发起成立上海社会主义青年团，俞秀松担任书记。同年9月，这条弄堂里又挂出了“外国语学社”的招牌。学社以外语教学为掩护，团结进步青年、培养革命干部，刘少奇、任弼时等由各地团组织推荐来此学习。建团与办学，让一座石库门小楼成为青年走向革命的重要起点。从这里出发，进步青年踏上追寻真理的道路。最值得我们记住的，是他们明知前路艰险，却依然选择相信未来的勇气。",
+    "student_note": "在了解这个地标之前，我以为共青团只是个“官方组织”，没想到它的起点竟是一群二十出头的年轻人自发攒起来的“创业项目”。了解之后最打动我的，是那种纯粹到不掺杂任何功利的理想主义——他们聚在一起不是因为指令，而是因为相信。在那个年代，这种“相信”本身，就是最稀缺的力量。",
+    "keywords": [
+      "俞秀松",
+      "外国语学社",
+      "1920年",
+      "石库门"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/02/cover.jpg",
+      "building": "images/02/building.jpg",
+      "detail": "images/02/detail.jpg",
+      "visit": "images/02/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "纪念馆石库门入口与铭牌。",
+      "building": "纪念馆石库门入口。图片署名：新华网。",
+      "detail": "外国语学社教室陈列场景。图片署名：新华网。",
+      "visit": "网络寻访时电脑屏幕上的纪念馆资料页面截图"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "共青团诞生地完成整体修缮重新开放",
+        "publisher": "中国新闻网（中新网）",
+        "url": "https://www.chinanews.com/gn/2019/04-29/8824143.shtml"
+      },
+      {
+        "name": "黄浦区党史学习教育场馆信息情况——中国社会主义青年团中央机关旧址纪念馆",
+        "publisher": "上海市黄浦区人民政府官网",
+        "url": "https://www.shhuangpu.gov.cn/zt/007018/007018001/20210511/2916cadf-fa56-4eb8-b83e-4c330f95bfb5.html"
+      },
+      {
+        "name": "中国社会主义青年团中央机关旧址纪念馆",
+        "publisher": "上海党史网",
+        "url": "https://www.ccphistory.org.cn/shds/shdsjyjd/content/e1c232bd-73ec-4077-949c-b7d3c193fe7b.html"
+      }
+    ],
     "map_position": {
       "x": 362,
       "y": 422
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   },
   {
     "id": "03",
-    "collector": "缪亦秋",
+    "collector": "缪奕秋",
     "site_name": "中共二大会址纪念馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "静安区",
+    "address": "上海市静安区老成都北路7弄30号",
+    "collection_type": "实地寻访＋资料整理",
+    "collection_date": "2026年10月7日",
+    "theme": "党员/红色基因/初心使命/党章文化",
+    "tagline": "党章从这里出发，来辅德里赴一场初心之约。",
+    "summary": "中共二大会址纪念馆，是上海石库门里纪念1922年中共二大的红色场馆。那年，12位代表在辅德里客堂间定下反帝反封建纲领，制定出党的第一部《党章》。它不只是“老房子”:一大立党，二大立纲，中国革命从此有方向、有规矩。今天来看，是想让青年明白怎样把理想写成制度，把“初心”变成能管百年的规则。",
+    "story": "1922年7月，12位年轻代表钻进上海辅德里一条石库门弄堂，在李达寓所的客堂间里，围着一张八仙桌开中共二大。窗外是租界暗探，桌上是中国的命运：会议制定出第一部《中国共产党章程》，第一次明确提出反帝反封建的民主革命纲领，第一次公开发表《中国共产党宣言》。最该记住的，不是“开了个会”，而是革命先驱们，把“理想”写成了“规矩”。一大是举旗：中国共产党成立了；二大是立纲：党要干什么、怎么干、谁可以进来、纪律是什么，全被写进条文。首部党章为党的组织建设提供了制度依据。",
+    "student_note": "之前我不知道，中共二大居然是在一间普通石库门客堂间里开的，更不了解第一部党章背后的故事。了解后最打动我的是，张人亚与父亲张爵谦冒险守护党章，才让它保存到今天——原来信仰不是喊口号，是真的有人拿命去守一张纸。",
+    "keywords": [
+      "党员",
+      "红色基因",
+      "初心使命",
+      "党章文化"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/03/cover.jpg",
+      "building": "images/03/building.jpg",
+      "detail": "images/03/detail.jpg",
+      "visit": "images/03/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "上海辅德里：中共二大会址与首部党章诞生地",
+      "building": "红墙铭刻建党精神，首部党章薪火相传",
+      "detail": "二大先驱群雕：早期革命者的热血群像",
+      "visit": "寻迹党的诞生地：二大旧址与党章精神永存"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "《党章，在这里诞生——探访中共二大会址》",
+        "publisher": "上海市静安区人民政府",
+        "url": "https://www.jingan.gov.cn/rmtzx/003008/003008002/20160628/270eb5b1-1056-4b3c-8fef-8fbf49c24510.html"
+      },
+      {
+        "name": "《中共“二大”会址纪念馆》",
+        "publisher": "人民网·中国共产党新闻网",
+        "url": "https://cpc.people.com.cn/BIG5/64176/64180/9401076.html"
+      },
+      {
+        "name": "守的是秘密 护的是党章",
+        "publisher": "上海市静安区人民政府（来源：新民晚报）",
+        "url": "https://www.jingan.gov.cn/rmtzx/003008/003008006/20210627/d4023131-2523-4f05-bd0f-a439e33df249.html"
+      }
+    ],
     "map_position": {
       "x": 352,
       "y": 353
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   },
   {
     "id": "04",
     "collector": "王韵清",
     "site_name": "上海四行仓库抗战纪念馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "静安区",
+    "address": "上海市静安区光复路21号",
+    "collection_type": "实地寻访＋资料整理",
+    "collection_date": "2026年10月4日",
+    "theme": "八百壮士，淞沪抗战，民族不屈",
+    "tagline": "一面弹痕累累老墙，诉说八百壮士浴血卫国的往事",
+    "summary": "这里是依托四行仓库抗战旧址建立的纪念馆，见证 1937 年淞沪会战尾声的四行仓库保卫战。谢晋元带领四百余名官兵，对外号称八百壮士坚守仓库四昼夜，阻击日军进攻。这段孤军抗争的历史，彰显中华民族不屈的抗争精神，提醒我们铭记苦难，珍惜当下的和平生活。",
+    "story": "1937 年淞沪会战后期，谢晋元率领四百多名官兵坚守四行仓库，为迷惑敌人对外号称 “八百壮士”。战斗期间，苏州河南岸租界内的民众时刻关注北岸战况。童子军杨惠敏冒着枪林弹雨，深夜渡河将一面国旗送入仓库。次日清晨，国旗在仓库楼顶升起，隔着苏州河的万千百姓见到国旗，备受鼓舞。战士陈树生身上捆满手榴弹，毅然从窗口跃下，与来犯的敌人同归于尽。四天四夜里，孤军打退日军多次进攻，用血肉向世界展现中国绝不屈服的抗战决心。",
+    "student_note": "参观之前，我只在影视作品里听说八百壮士的故事。站在布满弹孔的西墙前，我才真切感受到当年战斗的残酷。先辈们明知处境凶险仍誓死坚守，这份为国牺牲的勇气深深打动了我，也让我懂得今日安宁来之不易。",
+    "keywords": [
+      "八百壮士",
+      "谢晋元",
+      "淞沪会战",
+      "民族抗争"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/04/cover.jpg",
+      "building": "images/04/building.jpg",
+      "detail": "images/04/detail.jpg",
+      "visit": "images/04/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "上海四行仓库抗战纪念地晋元纪念广场标识石碑，是纪念馆的入口纪念区域",
+      "building": "四行仓库抗战纪念馆外景，展示带有累累弹孔的历史西墙",
+      "detail": "馆内四行仓库保卫战场景沙盘，还原当年仓库、苏州河及周边战场布局。",
+      "visit": "馆内陈列谢晋元致妻子的亲笔家书复刻件，展现壮士舍家为国的家国情怀。"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "上海四行仓库抗战纪念馆介绍",
+        "publisher": "上海市静安区人民政府",
+        "url": "https://www.jingan.gov.cn/rmtzx/003001/20260509/05e50f4763524be8aa9f430485d86868.html"
+      },
+      {
+        "name": "“八百壮士” 守四行",
+        "publisher": "新华网",
+        "url": "https://www.news.cn/20250818/da2b15a9572c4fe6b77f0d40bf708524/c.html"
+      }
+    ],
     "map_position": {
       "x": 404,
       "y": 294
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   },
   {
     "id": "05",
     "collector": "庄晨艺",
-    "site_name": "中共四大纪念馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "site_name": "中国共产党第四次全国代表大会纪念馆",
+    "district": "虹口区",
+    "address": "上海市虹口区四川北路1468号",
+    "collection_type": "实地寻访＋资料整理",
+    "collection_date": "2026年10月3日",
+    "theme": "支部建设",
+    "tagline": "1925年的冬天，中国共产党第一次把“支部”扎进了基层。",
+    "summary": "中国共产党第四次全国代表大会纪念馆位于虹口区四川北路公园，展示1925年中共四大的历史。大会第一次明确提出无产阶级领导权和工农联盟问题，也是党的支部建设的历史起点。现纪念馆于2012年开馆，与东宝兴路的原会址并非同一建筑。",
+    "story": "在中共四大纪念馆的展柜里，展示着一份特殊的会议通知复制件。1924年8月31日，中共中央以“钟英”为代号发出召开四大的通知，原通知由毛泽东亲笔签发，落款“钟英”，这是当时中共中央的代名。这份通知文字简短，却要发往全国各地的党组织，筹备一场事关革命前途的重要会议。彼时，距离中共四大正式召开还有近五个月。正是这份不起眼的通知，将分散在全国各地的代表们一点点汇聚到上海。次年1月，20位代表在当年的四大会址，用12天时间完成了党章修改、通过了11份决议案。最值得记住的是：一个百年大党的组织根基，是从一封署名“钟英”的普通通知开始的。",
+    "student_note": "我以前觉得“党支部”是理所当然的存在，本次实地了解后才发现，这个概念是在中共四大上才第一次被写进党章的。站在那栋石库门风格的纪念馆前，我忽然意识到：今天身边每一个基层党支部，都可以在这里找到它的起点。这种小细节中藏着大历史的感觉，比任何宏大叙事都更加打动了我。",
+    "keywords": [
+      "中共四大",
+      "支部建设",
+      "石库门",
+      "1925"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/05/cover.jpg",
+      "building": "images/05/building.jpg",
+      "detail": "images/05/detail.jpg",
+      "visit": "images/05/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "中共四大纪念馆外景。图片来源：中共一大纪念馆官网，见下方资料来源。",
+      "building": "场馆展厅。图片来源：虹口文明网，见下方资料来源。",
+      "detail": "馆内油画展品。图片来源：虹口文明网，见下方资料来源。",
+      "visit": "拍摄场馆展示册"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "中共四大纪念馆简介",
+        "publisher": "上海虹口门户网站（虹口区人民政府）",
+        "url": "https://www.shhk.gov.cn/xwzx/002008/002008047/002008047002/20251222/17639b35-93cb-4d17-87de-e06467604e62.html"
+      },
+      {
+        "name": "见证我党全国代表大会制度日益完善——毛泽东签署的两份关于召开中共四大通知的背后",
+        "publisher": "中国档案报（国家档案局主管）",
+        "url": "http://zgdazxw.com.cn/2025-01/10/content_501833.html"
+      },
+      {
+        "name": "两份中共四大会议通知由“钟英”发出，TA是谁？",
+        "publisher": "文汇报（中共四大纪念馆馆长讲述）",
+        "url": "https://wenhui.whb.cn/zhuzhan/gcs/20210924/425477.html"
+      },
+      {
+        "name": "中共四大纪念馆（封面图片来源）",
+        "publisher": "中共一大纪念馆",
+        "url": "https://www.zgyd1921.com/yesd/zgsd.html"
+      },
+      {
+        "name": "场馆与油画图片来源",
+        "publisher": "上海市虹口区人民政府·虹口文明网",
+        "url": "http://wm.shhk.gov.cn/hongkou/node3/n15/u1ai5515.html"
+      }
+    ],
     "map_position": {
       "x": 477,
       "y": 237
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   },
   {
     "id": "06",
     "collector": "童思妤",
     "site_name": "沪西工人半日学校史料陈列馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "普陀区",
+    "address": "上海市普陀区西苏州路1037号",
+    "collection_type": "实地采集＋资料整理",
+    "collection_date": "2026年10月1日",
+    "theme": "李启汉 / 1920年秋 / 小沙渡 / 工人为天",
+    "tagline": "百年前，一间工人课堂如何点亮改变命运的灯？",
+    "summary": "上海沪西工人半日学校史料陈列馆坐落于苏州河畔，是中国共产党早期组织创办的全国第一所工人学校。1920年秋，李启汉在此向纺织工人传播马克思主义，此后这里成为五卅运动的策源地之一，沪西工人正是从这间教室出发，走向了反帝爱国的斗争前线。",
+    "story": "1920年秋，李启汉在沪西小沙渡创办了全国第一所工人半日学校，招收纱厂工人入学。旧时资本家为了禁锢工人的思想和行为，言说“工字不出头，出头便入土”，试图让工人认命，对工人进行精神和劳动上的残酷剥削。在课堂上，为了从根源上使工人建立起自信，摆脱束缚，半日学校教员对此进行了改变，他们告诉那些工人们：“‘工’字上有天，下有地，中间是一个顶天立地的好汉，这就是我们工人阶级的伟大形象。‘工’、‘人’两字连起来就是个‘天’字，只要大家团结起来和敌人斗争，我们的力量大如天。”这样鼓舞人心的话，让被踩在脚下的人，第一次抬头看见了自己，也激发了许多工人内心的革命精神。",
+    "student_note": "参观前，我完全不知道1920年的上海还有这样一所学校，更不知道工人被剥削到“工字不出头，出头便入土”的地步。在了解这段历史之后，最打动我的是，那些每天干十二小时活的工人，第一次有人教他们认字，告诉他们“工人”合起来就是“天”。",
+    "keywords": [
+      "李启汉",
+      "小沙渡",
+      "工人为天",
+      "1920年秋"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/06/cover.jpg",
+      "building": "images/06/building.jpg",
+      "detail": "images/06/detail.jpg",
+      "visit": "images/06/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "沪西工人半日学校史料陈列馆外景，记录成员本次实地寻访的场馆。",
+      "building": "图为沪西工人半日学校史料陈列馆入口处主题浮雕墙。浮雕刻画了早期沪西工人学习、抗争的历史场景，背景配有鲜红的党旗，再现了上海工人运动蓬勃兴起的历史画卷。",
+      "detail": "图为沪西工人半日学校史料陈列馆内复原的工人教室场景。黑板上书写着“工人是天”，搭配古朴木课桌椅，再现早期工人接受思想启蒙的学习环境。",
+      "visit": "图为小组成员在沪西工人半日学校史料陈列馆内开展红色寻迹实践。成员正在展厅中拍摄记录展馆史料展品，体现本次实地寻访调研过程。"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "工人运动的摇篮：从沪西工人半日学校到沪西工友俱乐部",
+        "publisher": "上海市普陀区精神文明建设委员会办公室",
+        "url": "http://wenming.shpt.gov.cn/jjpt/20250613/960730.html"
+      },
+      {
+        "name": "播撒火种锦绣里（中国共产党首创的沪西工人半日学校旧址）",
+        "publisher": "上海市普陀区人民政府",
+        "url": "https://www.shpt.gov.cn/xfdt-bmshsjpz/20230918/914784.html"
+      }
+    ],
     "map_position": {
       "x": 252,
       "y": 297
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   },
   {
     "id": "07",
     "collector": "谭钧译",
     "site_name": "龙华烈士纪念馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "徐汇区",
+    "address": "上海市徐汇区龙华西路180号",
+    "collection_type": "数字寻访",
+    "collection_date": "2026年10月10日",
+    "theme": "龙华英烈 / 龙华二十四烈士 / 英雄壮歌 / 信仰与牺牲",
+    "tagline": "从龙华刑场到英雄殿堂，一段信仰如何穿越百年？",
+    "summary": "龙华烈士纪念馆位于上海市徐汇区龙华西路180号，是龙华烈士陵园的中心建筑。馆内常设《英雄壮歌——上海英烈纪念陈列》，通过照片、实物与艺术作品，讲述250余位上海英烈英模的故事。这里见证了上海革命斗争的历史，也提醒我们铭记先烈的选择与信仰。",
+    "story": "1931年1月17日起，国民党当局在上海连续逮捕林育南、何孟雄、柔石等革命者，随后将其中多人押往龙华国民党淞沪警备司令部监狱。面对审讯和诱降，他们始终坚守秘密、保护组织。2月7日深夜，林育南、何孟雄、李求实、柔石、胡也频、殷夫、冯铿等24位共产党员和革命志士在龙华被秘密杀害，史称“龙华二十四烈士”。其中柔石、殷夫、胡也频、李求实、冯铿被称为“左联五烈士”。今天来到龙华，最值得记住的不只是24个名字，更是他们在生死关头仍选择守护信仰、同志和组织的坚定。",
+    "student_note": "查资料前，我只知道龙华是纪念先烈的地方，不知道这里是革命志士被关押和杀害的历史现场。打动我的是“龙华二十四烈士”在狱中面对诱降，仍坚定地守护组织秘密。历史不只是姓名和日期，更是人在关键时刻作出的选择。",
+    "keywords": [
+      "龙华二十四烈士",
+      "1931年2月7日",
+      "上海英烈",
+      "信仰与牺牲"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/07/cover.jpg",
+      "building": "images/07/building.jpg",
+      "detail": "images/07/detail.jpg",
+      "visit": "images/07/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "龙华烈士纪念馆正面外景，蓝色玻璃金字塔和金色馆名清晰可见。网络资料图，非本人拍摄；来源：文汇报（2021年11月24日）。",
+      "building": "龙华烈士纪念馆建筑及陵园广场鸟瞰，展示建筑布局和周边环境。网络资料图，非本人拍摄；来源：澎湃新闻（2023年报道）。",
+      "detail": "纪念馆展厅内《军委四烈士》浮雕，展现革命先烈坚定信仰。网络资料图，非本人拍摄；来源：澎湃新闻·政务《艺赏龙陵——军委四烈士（下）》。",
+      "visit": "馆方公开的观众观看文物展柜场景，反映参观者如何接触馆内史料；属于网络数字寻访参考图，并非负责人的实地寻访照片。来源：龙华烈士陵园官网。"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "上海市龙华烈士陵园（龙华烈士纪念馆、上海市烈士纪念设施保护中心）—基本介绍",
+        "publisher": "上海市龙华烈士陵园（龙华烈士纪念馆、上海市烈士纪念设施保护中心）",
+        "url": "https://www.slmmm.cn/about.html"
+      },
+      {
+        "name": "上海市龙华烈士陵园",
+        "publisher": "上海市人民政府",
+        "url": "https://www.shanghai.gov.cn/hsly/20260625/41366204b48040d89fcbafa0e880f3b6.html"
+      },
+      {
+        "name": "《为了忘却的纪念》“龙华二十四烈士”综述",
+        "publisher": "上海市龙华烈士陵园",
+        "url": "https://www.slmmm.cn/zhuanti/24lieshi/main.html"
+      },
+      {
+        "name": "《左联等烈士走向刑场》馆藏介绍",
+        "publisher": "上海市龙华烈士陵园",
+        "url": "https://www.slmmm.cn/collection/exhibits/detail/848d495ba2404cfe9a4476caa1d5ac6a.html"
+      }
+    ],
     "map_position": {
       "x": 322,
       "y": 498
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   },
   {
     "id": "08",
     "collector": "冯绎帆",
     "site_name": "上海国歌展示馆",
-    "district": "",
-    "address": "",
-    "collection_type": "",
-    "collection_date": "",
-    "theme": "",
-    "tagline": "",
-    "summary": "",
-    "story": "",
-    "student_note": "",
-    "keywords": [],
+    "district": "杨浦区",
+    "address": "上海市杨浦区荆州路151号",
+    "collection_type": "数字寻访",
+    "collection_date": "2026年10月11日",
+    "theme": "国歌",
+    "tagline": "一首电影主题曲，如何成为民族奋进的旋律？",
+    "summary": "上海国歌展示馆位于杨浦区荆州路151号，2009年落成开放。所在地区与电影《风云儿女》的拍摄历史相连，《义勇军进行曲》正是该片主题歌。展馆通过文献、实物和影像讲述国歌的诞生与传播，是了解国歌历史的重要场所。",
+    "story": "1935年，电影《风云儿女》的主题歌《义勇军进行曲》诞生。5月9日，电通公司合唱队在上海百代唱片公司的录音棚录制了这首歌曲，录音随后用于电影。如今，国歌展示馆收藏的首版唱片，让观众能够接近这段声音的历史。需要区分的是：杨浦荆州路的国歌展示馆与徐汇的百代唱片灌制旧址并非同一地点。一首电影主题曲，从银幕走向群众，承载了抗日救亡的呼声，也让今天的青年从文献与实物中理解国歌所凝聚的精神力量。",
+    "student_note": "之前我只知道国歌的词曲作者。了解之后最打动我的是，在风雨飘摇的年代，一群文艺青年用一首歌曲凝聚起民族斗志，旋律里的力量穿越近百年依然滚烫。",
+    "keywords": [
+      "义勇军进行曲",
+      "抗战救亡",
+      "风云儿女",
+      "爱国精神"
+    ],
     "images": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "images/08/cover.jpg",
+      "building": "images/08/building.jpg",
+      "detail": "images/08/detail.jpg",
+      "visit": "images/08/visit.jpg"
     },
     "image_captions": {
-      "cover": "",
-      "building": "",
-      "detail": "",
-      "visit": ""
+      "cover": "国歌展示馆馆名与建筑外观。",
+      "building": "国歌展示馆展厅场景。",
+      "detail": "展柜中的国歌音像资料。",
+      "visit": "国歌展示馆线上账号页面截图，记录成员的数字资料查阅。"
     },
-    "sources": [],
+    "sources": [
+      {
+        "name": "国歌展示馆场馆介绍",
+        "publisher": "上海市杨浦区人民政府",
+        "url": "https://www.shyp.gov.cn/shypq/ggfw-blg/20190203/319275.html"
+      },
+      {
+        "name": "国歌展示馆入选全国爱国主义教育示范基地",
+        "publisher": "人民网上海频道",
+        "url": "http://sh.people.com.cn/BIG5/n2/2021/0624/c134768-34792055.html"
+      },
+      {
+        "name": "国歌展示馆",
+        "publisher": "上海党史网",
+        "url": "https://www.ccphistory.org.cn/shds/shdsjyjd/content/400228e9-79cf-475c-bfd8-65f83f15bf5c.html"
+      },
+      {
+        "name": "永恒旋律在这里回荡——国歌展示馆的藏品故事（一）",
+        "publisher": "杨浦时报",
+        "url": "https://yptimes.shyp.gov.cn/html/2021-06/08/content_9403_13486812.htm"
+      },
+      {
+        "name": "国歌展示馆（展区与灌制地点介绍）",
+        "publisher": "杨浦时报",
+        "url": "https://yptimes.shyp.gov.cn/html/2013-06/29/content_2_2.htm"
+      }
+    ],
     "map_position": {
       "x": 553,
       "y": 302
-    }
+    },
+    "content_status": "已收录",
+    "updated_at": "2026-10-19"
   }
 ];
