@@ -22,7 +22,7 @@ let backdropStart = false;
 dialog.addEventListener('pointerdown',e=>{const r=dialog.getBoundingClientRect();backdropStart=e.target===dialog && (e.clientX<r.left||e.clientX>r.right)});
 dialog.addEventListener('click',e=>{if(backdropStart && e.target===dialog)closeSite();backdropStart=false});
 dialog.addEventListener('close',()=>{document.body.style.overflow='';lastTrigger?.focus()});
-$('#nodes').innerHTML=sites.map(s=>`<g class="node" role="button" tabindex="0" aria-label="${s.id} ${escapeHTML(s.site_name)}，负责人${escapeHTML(s.collector)}" data-id="${s.id}" transform="translate(${s.map_position.x} ${s.map_position.y})"><title>${s.site_name} · ${s.collector}</title><circle class="halo" r="25"/><circle class="pin" r="17"/><text y="1">${s.id}</text></g>`).join('');
+$('#nodes').innerHTML=sites.map(s=>`<g class="node" role="button" tabindex="0" aria-label="${s.id} ${escapeHTML(s.site_name)}，负责人${escapeHTML(s.collector)}" data-id="${s.id}" transform="translate(${s.map_position.x} ${s.map_position.y})"><title>${s.site_name} · ${s.collector}</title><circle class="halo" r="18"/><circle class="ripple" r="12"/><circle class="pin" r="12"/><text y="1">${s.id}</text></g>`).join('');
 $('#connections').setAttribute('d',sites.map((s,i)=>`${i?'L':'M'}${s.map_position.x} ${s.map_position.y}`).join(' '));
 $('#map-list').innerHTML=sites.map(s=>`<button class="map-list-button" data-id="${s.id}"><span>${s.id}</span>${escapeHTML(s.site_name)}</button>`).join('');
 $('#cards').innerHTML=sites.map(s=>`<article class="card"><div class="card-art ${s.images?.cover?'has-photo':''}">${s.images?.cover?`<img src="${escapeHTML(s.images.cover)}" alt="${escapeHTML(s.site_name)}封面" loading="lazy">`:''}<span class="card-number">${s.id}</span><small>SHANGHAI · 红色坐标</small></div><div class="card-content"><h3>${escapeHTML(s.site_name)}</h3><p class="collector">寻迹者 / ${escapeHTML(s.collector)}</p><p class="card-tagline">${escapeHTML(s.tagline||'寻迹内容正在采集中……')}</p><button data-id="${s.id}" aria-label="查看${escapeHTML(s.site_name)}寻迹">查看寻迹</button></div></article>`).join('');
@@ -39,3 +39,35 @@ const collected=sites.filter(s=>s.summary&&s.story&&s.images?.cover).length;
 $('.status') && ($('.status').textContent=`已收录 ${collected} / ${sites.length} 处`);
 $('.map-note') && ($('.map-note').textContent='沿着八处坐标，阅读上海的红色记忆。');
 document.querySelectorAll('.card-art img').forEach(img=>img.addEventListener('error',()=>{img.parentElement.classList.remove('has-photo');img.remove()}));
+
+// 首屏高度 = 视口高度 - 页头高度，保证封面恰好占满一屏
+const setHeaderHeight=()=>document.documentElement.style.setProperty('--header-h',(document.querySelector('header')?.offsetHeight||86)+'px');
+setHeaderHeight();addEventListener('resize',setHeaderHeight);
+
+
+// 封面科技感：粒子网络、鼠标光斑、HUD 坐标读数、标题译码
+(()=>{
+ const hero=$('.hero'),cv=$('.hero-canvas');if(!hero||!cv)return;
+ const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,pts=[],visible=true,mouse={x:-999,y:-999};
+ const size=()=>{dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  const n=Math.min(90,Math.round(W*H/15000));pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.4+.6}))};
+ const draw=()=>{ctx.clearRect(0,0,W,H);const L=130;
+  for(const p of pts){if(!calm){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}}
+  for(let i=0;i<pts.length;i++){const a=pts[i];
+   for(let j=i+1;j<pts.length;j++){const b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<L){ctx.strokeStyle=`rgba(239,201,140,${(1-d/L)*.28})`;ctx.lineWidth=.8;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}
+   const dm=Math.hypot(a.x-mouse.x,a.y-mouse.y);if(dm<170){ctx.strokeStyle=`rgba(255,236,200,${(1-dm/170)*.6})`;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(mouse.x,mouse.y);ctx.stroke()}
+   ctx.fillStyle='rgba(246,220,174,.8)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,6.283);ctx.fill()}};
+ const loop=()=>{if(visible)draw();if(!calm)requestAnimationFrame(loop)};
+ size();addEventListener('resize',size);draw();if(!calm)requestAnimationFrame(loop);
+ if('IntersectionObserver' in window)new IntersectionObserver(e=>{visible=e[0].isIntersecting}).observe(hero);
+ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;hero.style.setProperty('--mx',mouse.x+'px');hero.style.setProperty('--my',mouse.y+'px')});
+ hero.addEventListener('pointerleave',()=>{mouse.x=mouse.y=-999});
+ if(calm)return;
+ const lat=$('#hud-lat'),lon=$('#hud-lon');
+ setInterval(()=>{if(!visible)return;lat&&(lat.textContent=(31.2304+Math.random()*.0009).toFixed(4)+'° N');lon&&(lon.textContent=(121.4737+Math.random()*.0009).toFixed(4)+'° E')},140);
+ const eb=$('.hero .eyebrow');if(eb){const full=eb.textContent,glyphs='01<>/+—#$%&*',t0=performance.now()+350;
+  const tick=now=>{const k=Math.max(0,(now-t0)/1500),n=Math.floor(k*full.length);
+   eb.textContent=[...full].map((c,i)=>i<n||c===' '||c==='/'?c:glyphs[Math.floor(Math.random()*glyphs.length)]).join('');
+   if(n<full.length)requestAnimationFrame(tick);else eb.textContent=full};requestAnimationFrame(tick)}
+})();

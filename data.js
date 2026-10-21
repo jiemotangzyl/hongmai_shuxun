@@ -56,8 +56,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 422,
-      "y": 389
+      "x": 359,
+      "y": 349
     },
     "note_title": "寻迹发现"
   },
@@ -110,8 +110,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 362,
-      "y": 422
+      "x": 329,
+      "y": 338
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
@@ -165,8 +165,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 352,
-      "y": 353
+      "x": 317,
+      "y": 295
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
@@ -215,8 +215,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 404,
-      "y": 294
+      "x": 346,
+      "y": 248
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
@@ -280,8 +280,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 477,
-      "y": 237
+      "x": 392,
+      "y": 204
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
@@ -330,8 +330,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 252,
-      "y": 297
+      "x": 259,
+      "y": 268
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
@@ -390,8 +390,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 322,
-      "y": 498
+      "x": 281,
+      "y": 518
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
@@ -455,8 +455,8 @@ const sites = [
       }
     ],
     "map_position": {
-      "x": 553,
-      "y": 302
+      "x": 542,
+      "y": 142
     },
     "content_status": "已收录",
     "updated_at": "2026-10-19"
